@@ -1,13 +1,13 @@
 <?php
 
-namespace Alcalyn\SilexWSSE\Provider;
+namespace Alcalyn\SilexWsse\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Alcalyn\WSSE\Security\Authentication\Provider\WsseTokenValidatorInterface;
-use Alcalyn\WSSE\Security\Authentication\Provider\WsseProvider;
-use Alcalyn\WSSE\Security\Http\EntryPoint\NoEntryPoint;
-use Alcalyn\WSSE\Security\Http\Firewall\WsseListener;
+use Alcalyn\Wsse\Security\Authentication\Provider\WsseTokenValidatorInterface;
+use Alcalyn\Wsse\Security\Authentication\Provider\WsseProvider;
+use Alcalyn\Wsse\Security\Http\EntryPoint\NoEntryPoint;
+use Alcalyn\Wsse\Security\Http\Firewall\WsseListener;
 
 class WsseServiceProvider implements ServiceProviderInterface
 {
