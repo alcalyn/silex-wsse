@@ -17,18 +17,11 @@ class WsseServiceProvider implements ServiceProviderInterface
     private $firewallName;
 
     /**
-     * @var WsseTokenValidatorInterface
-     */
-    private $digestValidator;
-
-    /**
      * @param string $firewallName
-     * @param WsseTokenValidatorInterface $digestValidator
      */
-    public function __construct($firewallName, WsseTokenValidatorInterface $digestValidator)
+    public function __construct($firewallName)
     {
         $this->firewallName = $firewallName;
-        $this->digestValidator = $digestValidator;
     }
 
     /**
@@ -42,7 +35,7 @@ class WsseServiceProvider implements ServiceProviderInterface
                 return new WsseProvider(
                     $app['security.user_provider.'.$this->firewallName],
                     $app['security.user_checker'],
-                    $this->digestValidator
+                    $app['security.wsse.token_validator']
                 );
             };
 
