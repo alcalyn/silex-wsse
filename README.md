@@ -107,7 +107,8 @@ $app->get('api/auth', function () use ($app) {
 $app->run();
 ```
 
-Then making the following http request with the `X-WSSE` header:
+Then making the following http request with the `X-WSSE` header
+(generated [here](http://www.teria.com/~koseki/tools/wssegen/)):
 
 ```
 GET http://localhost/my-app/index.php/api/auth
