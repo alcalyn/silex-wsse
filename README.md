@@ -1,6 +1,9 @@
 Silex WSSE
 ==========
 
+[![Latest Stable Version](https://poser.pugx.org/alcalyn/silex-wsse/v/stable)](https://packagist.org/packages/alcalyn/silex-wsse)
+[![License](https://poser.pugx.org/alcalyn/silex-wsse/license)](https://packagist.org/packages/alcalyn/silex-wsse)
+
 Provides a Silex provider in order to implement
 a [WSSE authentication](http://silex.sensiolabs.org/doc/providers/security.html#defining-a-custom-authentication-provider).
 
