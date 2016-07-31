@@ -38,7 +38,7 @@ $app->register(new \Silex\Provider\SecurityServiceProvider(), array(
 ));
 
 // SilexWsse needs a token validator service with a path where to store Wsse tokens
-$app['security.wsse.token_validator'] = function () use ($app) {
+$app['security.wsse.token_validator'] = function () {
     $wsseCacheDir = 'my-project-path/var/cache/wsse-tokens';
 
     return new PasswordDigestValidator($wsseCacheDir);
