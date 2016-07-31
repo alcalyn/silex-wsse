@@ -125,6 +125,24 @@ Hello toto
 ```
 
 
+### Debugging
+
+While implementing Wsse authentication, you should experience some authentication fail
+with your Wsse token (date expired, already used nonce...).
+
+To display the fail reason, you can display symfony authentication exception like that:
+
+``` php
+use Symfony\Component\Security\Core\Event\AuthenticationFailureEvent;
+
+$app->on('security.authentication.failure', function(AuthenticationFailureEvent $event) {
+    echo $event->getAuthenticationException()->getMessage();
+});
+```
+
+See Symfony [documentation about authentication events](http://symfony.com/doc/current/components/security/authentication.html#authentication-events).
+
+
 ## License
 
 This project is under [MIT License](LICENSE).
